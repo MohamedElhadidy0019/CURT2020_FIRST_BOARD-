@@ -39,6 +39,7 @@ void IDLE_Func()
 
 	HAL_GPIO_WritePin(EVMS_RELAY_GPIO_Port,EVMS_RELAY_Pin,1);
 	//if the start button is not pressed then the next state is still idle state
+	// this if can be removed and dont think the code functionality will be changed3
 	if(! HAL_GPIO_ReadPin(START_BTN_GPIO_Port,START_BTN_Pin))
 	{
 		nextStateM=IDLE;
@@ -173,6 +174,9 @@ void DRIVE_Func()
 		// IF THE START BUTTON IS PRESSED GO TO DISCHARGE STATE
 		while(HAL_GPIO_ReadPin(START_BTN_GPIO_Port,START_BTN_Pin)); //wait until the driver release the button
 		HAL_Delay(50); //delay for button debouncing
+		
+
+		htim3.Instance->CCR3=0;
 		nextStateM=DISCHARGE;
 
 	}
