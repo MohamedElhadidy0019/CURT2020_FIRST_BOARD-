@@ -1,2 +1,7 @@
 # CURT_FIRST_BOARD 
- This is the code of the first board of the electric vehicle of CURT2020
+ This is the code of the embedded of the electric vehicle of CURT2020
+
+This code is written using the HAL drivers of the STM32
+
+
+The code complies with FS-UK rules and handles all the conditions and corner cases of the vehicel state, monitors the vehicle and ensures its safety.
