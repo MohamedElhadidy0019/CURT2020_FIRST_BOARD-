@@ -1,4 +1,6 @@
 # CURT_FIRST_BOARD 
+
+## The Complete logic will be found in src/EVMS.c
  This is the code of the embedded of the electric vehicle of CURT2020
 
 This code is written using the HAL drivers of the STM32
